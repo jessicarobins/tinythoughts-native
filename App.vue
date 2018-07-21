@@ -1,8 +1,5 @@
 <template>
-  <nb-container>
-    <nav-menu />
     <app-navigation />
-  </nb-container>
 </template>
 
 <script>
