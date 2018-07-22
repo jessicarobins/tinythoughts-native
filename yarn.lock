@@ -7262,11 +7262,13 @@ tslib@1.9.0:
 
 "tt-module@https://github.com/jessicarobins/tt-module":
   version "0.0.1"
-  resolved "https://github.com/jessicarobins/tt-module#16d080ac908b4451db815d0c81f216a6c5ea86be"
+  resolved "https://github.com/jessicarobins/tt-module#3986812d4ba2ab08ba690de4861e989cd266c384"
   dependencies:
+    crypto-js "^3.1.9-1"
     firebase "^5.3.0"
     lodash "^4.17.10"
     moment "^2.22.2"
+    uuid "^3.3.2"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
@@ -7425,7 +7427,7 @@ uuid@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
-uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
+uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
 

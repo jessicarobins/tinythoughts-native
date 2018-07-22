@@ -6,7 +6,7 @@
       </nb-button>
     </nb-left>
     <nb-body>
-      <nb-title>{{ title }}</nb-title>
+      <nb-title></nb-title>
     </nb-body>
     <nb-right />
   </nb-header>

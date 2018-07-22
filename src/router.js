@@ -1,41 +1,25 @@
-import React from 'react'
-import { StackNavigator, SwitchNavigator } from 'vue-native-router'
-import Home from './screens/Home.vue'
-import Login from './screens/Login.vue'
-import NavMenu from './components/NavMenu.vue'
+import { NavigationActions } from 'react-navigation'
 
-const AppStack = StackNavigator({
-    Home: {
-      screen: Home,
-      navigationOptions: {
-        title: 'Home',
-      }
-    },
-  },
-  {
-    navigationOptions: {
-      header: (navigation) => <NavMenu navigation={navigation} />
-    }
-  }
-);
+let _navigator
 
-const AuthStack = StackNavigator({
-  Login: {
-    screen: Login,
-    navigationOptions: {
-      title: 'Login',
-    }
-  }
-});
+function setTopLevelNavigator(navigatorRef) {
+  _navigator = navigatorRef
+}
 
-const AppNavigation = SwitchNavigator(
-  {
-    App: AppStack,
-    Auth: AuthStack,
-  },
-  {
-    initialRouteName: 'App',
-  }
-)
+function push({ name }, params) {
+  console.log('is this being called? with what?', name)
+  console.log('is this even anything?', _navigator)
+  _navigator.dispatch(
+    NavigationActions.navigate({
+      name: 'App',
+      params,
+    })
+  )
+}
 
-export default AppNavigation
+// add other navigation functions that you need and export them
+
+export default {
+  push,
+  setTopLevelNavigator,
+}
