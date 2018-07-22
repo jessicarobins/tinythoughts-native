@@ -5064,7 +5064,7 @@ mkdirp@*, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@2.x.x, moment@^2.10.6:
+moment@2.x.x, moment@^2.10.6, moment@^2.22.2:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
@@ -7259,6 +7259,14 @@ trim-right@^1.0.1:
 tslib@1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.0.tgz#e37a86fda8cbbaf23a057f473c9f4dc64e5fc2e8"
+
+"tt-module@https://github.com/jessicarobins/tt-module":
+  version "0.0.1"
+  resolved "https://github.com/jessicarobins/tt-module#16d080ac908b4451db815d0c81f216a6c5ea86be"
+  dependencies:
+    firebase "^5.3.0"
+    lodash "^4.17.10"
+    moment "^2.22.2"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"

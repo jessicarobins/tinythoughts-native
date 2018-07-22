@@ -3,15 +3,17 @@
 </template>
 
 <script>
-import Vue from 'vue-native-core';
-import { VueNativeBase } from 'native-base';
+import Vue from 'vue-native-core'
 import Vuex from 'vuex'
+import { VueNativeBase } from 'native-base'
 
 import AppNavigation from './src/router'
 import NavMenu from './src/components/NavMenu.vue'
+import store from './src/store'
 
 Vue.use(VueNativeBase)
 Vue.use(Vuex)
+Vue.prototype.$store = store
 
 export default {
   name: 'App',
