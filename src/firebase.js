@@ -1,4 +1,5 @@
 import { FirebaseService } from 'tt-module'
+import store from './store'
 
 import {
   VUE_APP_FIREBASE_API_KEY,
@@ -16,6 +17,12 @@ const firebase = new FirebaseService({
   projectId: VUE_APP_FIREBASE_PROJECT_ID,
   storageBucket: VUE_APP_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: VUE_APP_FIREBASE_MESSAGING_SENDER_ID
+})
+
+firebase.auth().onAuthStateChanged((firebaseUser) => {
+  if (firebaseUser) {
+    store.dispatch('onUserLogin', firebaseUser)
+  }
 })
 
 export default firebase
