@@ -1,11 +1,14 @@
 <template>
+  <style-wrapper>
     <app-navigation />
+  </style-wrapper>
 </template>
 
 <script>
 import Vue from 'vue-native-core'
 import Vuex from 'vuex'
 import { VueNativeBase } from 'native-base'
+import StyleWrapper from './src/components/StyleWrapper'
 
 import AppNavigation from './src/router'
 import NavMenu from './src/components/NavMenu.vue'
@@ -19,9 +22,10 @@ export default {
   name: 'App',
   components: {
     AppNavigation,
-    NavMenu
+    NavMenu,
+    StyleWrapper
   },
-};
+}
 </script>
 
 <style>

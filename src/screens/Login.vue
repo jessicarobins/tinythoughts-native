@@ -1,12 +1,19 @@
 <template>
-  <nb-form>
-    <nb-item>
-      <nb-input placeholder="Email" />
-    </nb-item>
-    <nb-item last>
-      <nb-input placeholder="Password" />
-    </nb-item>
-  </nb-form>
+  <nb-content padder>
+    <nb-form>
+      <nb-item>
+        <nb-input placeholder="Email" text-content-type="email" />
+      </nb-item>
+      <nb-item last>
+        <nb-input placeholder="Password" :secure-text-entry="true" text-content-type="password" />
+      </nb-item>
+      <nb-button block primary>
+        <nb-text>
+          Login
+        </nb-text>
+      </nb-button>
+    </nb-form>
+  </nb-content>
 </template>
 
 <script>

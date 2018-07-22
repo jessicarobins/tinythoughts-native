@@ -7,15 +7,15 @@ const AppNavigation = StackNavigator(
   {
     Login: {
       screen: Login,
-      navigationOptions: () => ({
+      navigationOptions: {
         title: 'Login',
-      }),
+      }
     }
   },
   {
     initialRouteName: 'Login',
     navigationOptions: {
-      header: <NavMenu />
+      header: (navigation) => <NavMenu navigation={navigation} />
     }
   }
 )

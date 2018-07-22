@@ -6,7 +6,7 @@
       </nb-button>
     </nb-left>
     <nb-body>
-      <nb-title>Header</nb-title>
+      <nb-title>{{ title }}</nb-title>
     </nb-body>
     <nb-right />
   </nb-header>
@@ -15,6 +15,12 @@
 <script>
 export default {
   name: 'NavMenu',
+  props: ['navigation'],
+  computed: {
+    title() {
+      return this.navigation.scene.route.routeName
+    }
+  }
 };
 </script>
 
