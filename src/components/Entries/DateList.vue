@@ -1,6 +1,6 @@
 <template>
   <nb-list :class="{ list: true, primary: isPurple }">
-    <nb-list-item itemDivider>
+    <nb-list-item itemDivider noBorder>
       <nb-h1 v-if="isPurple" class="date">{{ date }}</nb-h1>
       <nb-text class="date" v-else>{{ date }}</nb-text>
     </nb-list-item>

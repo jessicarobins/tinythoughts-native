@@ -2,7 +2,7 @@
   <nb-header>
     <nb-left>
       <nb-button transparent>
-        <nb-icon :name="'menu'" />
+        <nb-icon :name="'menu'" :onPress="handleMenuPress" />
       </nb-button>
     </nb-left>
     <nb-body>
@@ -16,9 +16,9 @@
 export default {
   name: 'NavMenu',
   props: ['navigation'],
-  computed: {
-    title() {
-      return this.navigation.scene.route.routeName
+  methods: {
+    handleMenuPress() {
+      this.navigation.navigate('DrawerToggle')
     }
   }
 };

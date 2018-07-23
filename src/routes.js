@@ -1,22 +1,33 @@
 import React, { Component } from 'react'
-import { StackNavigator, SwitchNavigator } from 'vue-native-router'
+import { DrawerNavigator, StackNavigator, SwitchNavigator } from 'vue-native-router'
 import router from './router'
 import AuthLoading from './screens/AuthLoading.vue'
 import Home from './screens/Home.vue'
 import Login from './screens/Login.vue'
 import NavMenu from './components/NavMenu.vue'
+import SidebarDrawer from './components/SidebarDrawer.vue'
+
+const Drawer = DrawerNavigator(
+  {
+    Home: { screen: Home }
+  },
+  {
+    initialRouteName: 'Home',
+    contentOptions: {
+      activeTintColor: "#e91e63"
+    },
+    contentComponent: props => <SidebarDrawer {...props} />
+  }
+);
 
 const AppStack = StackNavigator({
-    Home: {
-      screen: Home,
-      navigationOptions: {
-        title: 'Home',
-      }
+    Drawer: {
+      screen: Drawer
     },
   },
   {
     navigationOptions: {
-      header: (navigation) => <NavMenu navigation={navigation} />
+      header: (props) => <NavMenu {...props} />
     }
   }
 );

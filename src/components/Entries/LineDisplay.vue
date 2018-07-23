@@ -1,5 +1,6 @@
 <template>
   <nb-list-item
+    noBorder
     :thumbnail="line.imageUrl && line.text.length > 0">
     <nb-left v-if="line.imageUrl && line.text && line.text.length > 0">
       <lightbox :imageUrl="line.imageUrl">
