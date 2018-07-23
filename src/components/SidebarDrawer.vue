@@ -1,42 +1,40 @@
 <template>
-  <nb-container>
-    <nb-content class="sidebar-content-wrapper" :bounces="false">
-      <view class="list-header">
-        <nb-thumbnail :source="logo" class="thumbnail" />
-        <nb-text>{{ userEmail }}</nb-text>
-      </view>
-      <nb-list>
-        <nb-list-item
-          v-for="link in links"
-          :key="link.route"
-          button
-          :onPress="() => handleListItemClick(link)">
-          <nb-left>
-            <nb-icon
-              active
-              :name="link.icon"
-              :style="{ color: '#777', fontSize: 26, width: 30 }"
-            />
-            <nb-text>
-              {{link.name}}
-            </nb-text>
-          </nb-left>
-        </nb-list-item>
-        <nb-list-item button :onPress="userSignOut">
-          <nb-left>
-            <nb-icon
-              active
-              name="ios-log-out"
-              :style="{ color: '#777', fontSize: 26, width: 30 }"
-            />
-            <nb-text>
-              Log out
-            </nb-text>
-          </nb-left>
-        </nb-list-item>
-      </nb-list>
-    </nb-content>
-  </nb-container>
+  <nb-content class="sidebar-content-wrapper" :bounces="false">
+    <view class="list-header">
+      <nb-thumbnail :source="logo" class="thumbnail" />
+      <nb-text>{{ userEmail }}</nb-text>
+    </view>
+    <nb-list>
+      <nb-list-item
+        v-for="link in links"
+        :key="link.route"
+        button
+        :onPress="() => handleListItemClick(link)">
+        <nb-left>
+          <nb-icon
+            active
+            :name="link.icon"
+            :style="{ color: '#777', fontSize: 26, width: 30 }"
+          />
+          <nb-text>
+            {{link.name}}
+          </nb-text>
+        </nb-left>
+      </nb-list-item>
+      <nb-list-item button :onPress="userSignOut">
+        <nb-left>
+          <nb-icon
+            active
+            name="ios-log-out"
+            :style="{ color: '#777', fontSize: 26, width: 30 }"
+          />
+          <nb-text>
+            Log out
+          </nb-text>
+        </nb-left>
+      </nb-list-item>
+    </nb-list>
+  </nb-content>
 </template>
 
 <script>

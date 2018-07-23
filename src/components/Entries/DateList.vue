@@ -4,7 +4,12 @@
       <nb-h1 v-if="isPurple" class="date">{{ date }}</nb-h1>
       <nb-text class="date" v-else>{{ date }}</nb-text>
     </nb-list-item>
-    <line-display v-for="line in lines" :line="line" />
+    <line-display
+      v-for="line in lines"
+      :key="line.id"
+      :year="year(line)"
+      :text="line.text"
+      :imageUrl="line.imageUrl" />
   </nb-list>
 </template>
 
@@ -25,6 +30,7 @@ export default {
     isPurple() {
       return this.isPurpleable && moment().format(utils.groupByDateFormat) === this.date
     },
+    year: () => utils.getYearForLine
   },
 };
 </script>
