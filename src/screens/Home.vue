@@ -1,16 +1,29 @@
 <template>
   <nb-content padder class="content">
+    <new-line-form v-if="showForm" />
     <entry-list />
   </nb-content>
 </template>
 
 <script>
-import EntryList from '../components/Entries/EntryList'
+import { mapGetters } from 'vuex'
+import EntryList from '../components/Entries/EntryList.vue'
+import NewLineForm from '../components/Form/NewLineForm.vue'
 
 export default {
   name: 'Home',
   components: {
-    EntryList
+    EntryList,
+    NewLineForm,
+  },
+  computed: {
+    ...mapGetters([
+      'hasToday',
+      'linesAreLoading',
+    ]),
+    showForm() {
+      return !this.linesAreLoading && !this.hasToday
+    },
   }
 };
 </script>

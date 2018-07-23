@@ -3,12 +3,14 @@
     <nb-form>
       <nb-item :error="dirty && email.length === 0">
         <nb-input
+          floatingLabel
           placeholder="Email"
           text-content-type="email"
           v-model="email" />
       </nb-item>
       <nb-item :error="dirty && password.length === 0">
         <nb-input
+          floatingLabel
           placeholder="Password"
           :secure-text-entry="true"
           text-content-type="password"

@@ -1,13 +1,15 @@
 <template>
-  <style-wrapper v-if="isAppReady">
-    <app-navigation />
-  </style-wrapper>
+  <root>
+    <style-wrapper v-if="isAppReady">
+      <app-navigation />
+    </style-wrapper>
+  </root>
 </template>
 
 <script>
 import Vue from 'vue-native-core'
 import Vuex from 'vuex'
-import { VueNativeBase } from 'native-base'
+import { Root, VueNativeBase } from 'native-base'
 import { AppLoading, Font } from 'expo'
 
 import NavMenu from './src/components/NavMenu.vue'
@@ -25,6 +27,7 @@ export default {
     AppLoading,
     AppNavigation,
     NavMenu,
+    Root,
     StyleWrapper
   },
   data() {

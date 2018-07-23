@@ -27,8 +27,8 @@ export default {
   btnUppercaseAndroidText: true,
 
   // Badge
-  badgeBg: "#ED1727",
-  badgeColor: "#fff",
+  badgeBg: "whitesmoke",
+  badgeColor: "#4a4a4a",
   badgePadding: platform === "ios" ? 3 : 0,
 
   // Button
@@ -197,7 +197,7 @@ export default {
   // List
   listBg: "transparent",
   listBorderColor: "transparent",
-  listDividerBg: "#f4f4f4",
+  listDividerBg: "transparent",
   listBtnUnderlayColor: "#DDD",
   listItemPadding: platform === "ios" ? 10 : 12,
   listNoteColor: "#808080",
@@ -243,7 +243,7 @@ export default {
   tabFontSize: 15,
 
   // Text
-  textColor: "#000",
+  textColor: "#4a4a4a",
   inverseTextColor: "#fff",
   noteFontSize: 14,
   get defaultTextColor() {
