@@ -23,6 +23,9 @@ firebase.auth().onAuthStateChanged((firebaseUser) => {
   if (firebaseUser) {
     console.log('We are authenticated now!')
     store.dispatch('onUserLogin', firebaseUser)
+  } else {
+    console.log('not authenticated')
+    store.commit('decrementUserLoading')
   }
 })
 
