@@ -19,7 +19,6 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'isAuthenticated',
       'hasToday',
       'linesAreLoading',
     ]),
@@ -27,13 +26,6 @@ export default {
       return !this.linesAreLoading && !this.hasToday
     },
   },
-  watch: {
-    isAuthenticated(value) {
-      if (!value) {
-        this.navigation.navigate('Auth')
-      }
-    }
-  }
 };
 </script>
 

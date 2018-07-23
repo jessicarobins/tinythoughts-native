@@ -1,18 +1,17 @@
 <template>
-  <nb-content padder>
-    <nb-spinner v-if="userIsLoading" />
-    <nb-form v-else>
-      <nb-item :error="dirty && email.length === 0">
+  <nb-content padder class="content" :contentContainerStyle="{ alignItems: 'stretch', justifyContent: 'center', flex: 1 }">
+    <image :source="logo" resizeMode="contain" :style="{ width: '100%', height: 200 }" />
+    <nb-h1 class="logo">tinythoughts</nb-h1>
+    <nb-form>
+      <nb-item :error="dirty && email.length === 0" floatingLabel>
+        <nb-label>Email</nb-label>
         <nb-input
-          floatingLabel
-          placeholder="Email"
           text-content-type="email"
           v-model="email" />
       </nb-item>
-      <nb-item :error="dirty && password.length === 0">
+      <nb-item :error="dirty && password.length === 0" floatingLabel>
+        <nb-label>Password</nb-label>
         <nb-input
-          floatingLabel
-          placeholder="Password"
           :secure-text-entry="true"
           text-content-type="password"
           v-model="password" />
@@ -27,24 +26,24 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions } from 'vuex'
+import { Image } from 'react-native'
 import { Toast } from 'native-base'
+import logo from '../assets/images/notebook.png'
 
 export default {
   name: 'Login',
   props: ['navigation'],
+  components: {
+    Image
+  },
   data() {
     return {
       dirty: false,
       email: '',
-      password: ''
+      password: '',
+      logo
     }
-  },
-  computed: {
-    ...mapGetters([
-      'encryptionKey',
-      'userIsLoading',
-    ]),
   },
   methods: {
     ...mapActions([
@@ -61,18 +60,23 @@ export default {
       this.dirty = true
     },
   },
-  watch: {
-    encryptionKey(value) {
-      if (value) {
-        this.navigation.navigate('App')
-      }
-    }
-  }
 };
 </script>
 
 <style>
+.content {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
 .login {
   margin-top: 20px;
+}
+
+.logo {
+  font-family: SpecialElite;
+  text-align: center;
+  padding-top: 20px;
 }
 </style>
