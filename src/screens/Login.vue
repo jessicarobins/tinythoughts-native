@@ -1,6 +1,7 @@
 <template>
   <nb-content padder>
-    <nb-form>
+    <nb-spinner v-if="userIsLoading" />
+    <nb-form v-else>
       <nb-item :error="dirty && email.length === 0">
         <nb-input
           floatingLabel
@@ -26,17 +27,24 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import { Toast } from 'native-base'
 
 export default {
   name: 'Login',
+  props: ['navigation'],
   data() {
     return {
       dirty: false,
       email: '',
       password: ''
     }
+  },
+  computed: {
+    ...mapGetters([
+      'encryptionKey',
+      'userIsLoading',
+    ]),
   },
   methods: {
     ...mapActions([
@@ -52,6 +60,13 @@ export default {
 
       this.dirty = true
     },
+  },
+  watch: {
+    encryptionKey(value) {
+      if (value) {
+        this.navigation.navigate('App')
+      }
+    }
   }
 };
 </script>

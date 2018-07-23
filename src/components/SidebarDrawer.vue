@@ -65,6 +65,7 @@ export default {
       'userSignOut'
     ]),
     handleSignOut() {
+      console.log('signing out...')
       this.userSignOut()
     },
     handleListItemClick(dataObj) {

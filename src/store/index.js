@@ -17,6 +17,7 @@ const lines = modules.lines({ firebase })
 export default new Vuex.Store({
   modules: {
     auth,
-    lines
+    lines,
+    site: modules.site
   },
 })

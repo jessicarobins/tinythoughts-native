@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { DrawerNavigator, StackNavigator, SwitchNavigator } from 'vue-native-router'
 import router from './router'
-import AuthLoading from './screens/AuthLoading.vue'
 import Home from './screens/Home.vue'
 import Login from './screens/Login.vue'
 import NavMenu from './components/NavMenu.vue'
@@ -45,26 +44,27 @@ const TopLevelNavigator = SwitchNavigator(
   {
     App: AppStack,
     Auth: AuthStack,
-    AuthLoading,
   },
   {
-    initialRouteName: 'AuthLoading',
+    initialRouteName: 'Auth',
   }
 )
 
-class AppNavigation extends Component {
-  setNavigator(navigatorRef) {
-    console.log('setting navigatorRef')
-    router.setTopLevelNavigator(navigatorRef)
-  }
+export default TopLevelNavigator
 
-  render() {
-    return (
-      <TopLevelNavigator
-        ref={this.setNavigator}
-      />
-    );
-  }
-}
+// class AppNavigation extends Component {
+//   setNavigator(navigatorRef) {
+//     console.log('setting navigatorRef')
+//     router.setTopLevelNavigator(navigatorRef)
+//   }
 
-export default AppNavigation
+//   render() {
+//     return (
+//       <TopLevelNavigator
+//         ref={this.setNavigator}
+//       />
+//     );
+//   }
+// }
+
+// export default AppNavigation
