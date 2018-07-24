@@ -21,7 +21,7 @@ export default {
   methods: {
     handleMenuPress() {
       this.navigation.dispatch(DrawerActions.toggleDrawer())
-    }
+    },
   },
 };
 </script>

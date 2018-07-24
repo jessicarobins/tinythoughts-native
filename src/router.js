@@ -7,11 +7,10 @@ function setTopLevelNavigator(navigatorRef) {
 }
 
 function push({ name }, params) {
-  console.log('is this being called? with what?', name)
-  console.log('is this even anything?', _navigator)
+  console.log('attempting to push route ', name)
   _navigator.dispatch(
     NavigationActions.navigate({
-      name: 'App',
+      routeName: name,
       params,
     })
   )

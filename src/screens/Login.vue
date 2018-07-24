@@ -52,9 +52,14 @@ export default {
     formIsValid() {
       return this.email.length && this.password.length
     },
-    handleSignIn() {
+    async handleSignIn() {
       if (this.formIsValid()) {
-        return this.userEmailSignIn({ user: { email: this.email, password: this.password } })
+        return this.userEmailSignIn({
+          user: {
+            email: this.email,
+            password: this.password
+          }
+        })
       }
 
       this.dirty = true

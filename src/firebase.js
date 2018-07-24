@@ -19,14 +19,19 @@ const firebase = new FirebaseService({
   messagingSenderId: VUE_APP_FIREBASE_MESSAGING_SENDER_ID
 })
 
-firebase.auth().onAuthStateChanged((firebaseUser) => {
-  if (firebaseUser) {
-    console.log('We are authenticated now!')
-    store.dispatch('onUserLogin', firebaseUser)
-  } else {
-    console.log('not authenticated')
-    store.commit('decrementUserLoading')
-  }
-})
+export function authPromise() {
+  return new Promise(async (resolve, reject) => {
+    firebase.auth().onAuthStateChanged(async(firebaseUser) => {
+      if (firebaseUser) {
+        console.log('We are authenticated now!')
+        await store.dispatch('onUserLogin', firebaseUser)
+      } else {
+        console.log('not authenticated')
+        store.commit('decrementUserLoading')
+      }
+      resolve(firebaseUser)
+    })
+  })
+}
 
 export default firebase
