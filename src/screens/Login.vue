@@ -1,7 +1,5 @@
 <template>
-  <nb-content padder class="content" :contentContainerStyle="{ alignItems: 'stretch', justifyContent: 'center', flex: 1 }">
-    <image :source="logo" resizeMode="contain" :style="{ width: '100%', height: 200 }" />
-    <nb-h1 class="logo">tinythoughts</nb-h1>
+  <nb-content padder class="content">
     <nb-form>
       <nb-item :error="dirty && email.length === 0" floatingLabel>
         <nb-label>Email</nb-label>
@@ -27,22 +25,16 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { Image } from 'react-native'
 import { Toast } from 'native-base'
-import logo from '../assets/images/notebook.png'
 
 export default {
   name: 'Login',
   props: ['navigation'],
-  components: {
-    Image
-  },
   data() {
     return {
       dirty: false,
       email: '',
       password: '',
-      logo
     }
   },
   methods: {

@@ -7,6 +7,7 @@ import {
 import AuthLoading from './screens/AuthLoading'
 import Home from './screens/Home.vue'
 import Login from './screens/Login.vue'
+import LoginSignup from './screens/LoginSignup.vue'
 import NavMenu from './components/NavMenu.vue'
 import SidebarDrawer from './components/SidebarDrawer.vue'
 import router from './router'
@@ -33,9 +34,23 @@ const AppStack = createStackNavigator({
 })
 
 const AuthStack = createStackNavigator({
-  Login: Login,
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      title: 'Login'
+    }
+  },
+  LoginSignup,
 }, {
-  headerMode: 'none'
+  initialRouteName: 'LoginSignup',
+  headerMode: 'screen',
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: '#fff',
+      borderBottomWidth: 0
+    },
+    headerTintColor: '#7957D5'
+  }
 });
 
 const TopLevelNavigator = createSwitchNavigator(
