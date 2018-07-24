@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image, Text } from 'react-native'
 import Lightbox from 'react-native-lightbox'
-import { withNavigation } from 'vue-native-router'
+import { withNavigation } from 'react-navigation'
 
 const LightboxView = ({ navigator, imageUrl, children }) => {
   const lightboxProps = { navigator }

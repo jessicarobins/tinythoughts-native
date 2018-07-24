@@ -11,9 +11,7 @@
       <nb-text note :numberOfLines="1" class="year">{{ year }}</nb-text>
       <view v-if="text && text.length > 0" class="tag-container">
         <view v-for="(word, index) in words" :key="index">
-          <nb-button v-if="word.startsWith('#')" transparent primary class="tag-button">
-            <nb-text class="tag">{{ word }}</nb-text>
-          </nb-button>
+          <tag-button v-if="word.startsWith('#')" :tag="word" />
           <nb-text v-else class="tag">{{ word }}</nb-text>
         </view>
       </view>
@@ -25,6 +23,7 @@
 <script>
 import { Image, TouchableHighlight } from 'react-native'
 import Lightbox from '../Lightbox'
+import TagButton from '../TagButton'
 
 export default {
   name: 'LineDisplay',
@@ -32,6 +31,7 @@ export default {
   components: {
     Image,
     Lightbox,
+    TagButton,
     TouchableHighlight
   },
   computed: {

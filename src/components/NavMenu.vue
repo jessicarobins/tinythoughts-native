@@ -13,12 +13,14 @@
 </template>
 
 <script>
+import { DrawerActions } from 'react-navigation'
+
 export default {
   name: 'NavMenu',
   props: ['navigation'],
   methods: {
     handleMenuPress() {
-      this.navigation.navigate('DrawerToggle')
+      this.navigation.dispatch(DrawerActions.toggleDrawer())
     }
   }
 };

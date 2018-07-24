@@ -9,15 +9,18 @@
 <script>
 import React from 'react'
 import { mapGetters } from 'vuex'
-import { DrawerNavigator, StackNavigator, SwitchNavigator } from 'vue-native-router'
+import {
+  createDrawerNavigator,
+  createStackNavigator,
+} from 'react-navigation'
 import Home from './Home.vue'
 import Login from './Login.vue'
 import NavMenu from '../components/NavMenu.vue'
 import SidebarDrawer from '../components/SidebarDrawer.vue'
 
-const Drawer = DrawerNavigator(
+const Drawer = createDrawerNavigator(
   {
-    Home: { screen: Home }
+    Home
   },
   {
     initialRouteName: 'Home',
@@ -28,7 +31,7 @@ const Drawer = DrawerNavigator(
   }
 )
 
-const AppStack = StackNavigator({
+const AppStack = createStackNavigator({
   Drawer: Drawer,
 }, {
   navigationOptions: {
@@ -36,7 +39,7 @@ const AppStack = StackNavigator({
   }
 })
 
-const AuthStack = StackNavigator({
+const AuthStack = createStackNavigator({
   Login: Login,
 }, {
   headerMode: 'none'

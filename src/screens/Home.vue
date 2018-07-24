@@ -25,6 +25,11 @@ export default {
     showForm() {
       return !this.linesAreLoading && !this.hasToday
     },
+    tag() {
+      const tag = this.navigation.getParam('tag')
+      console.log('tag? ', tag)
+      return tag
+    }
   },
 };
 </script>

@@ -1,8 +1,8 @@
 import React from 'react'
-import { SwitchNavigator } from 'vue-native-router'
+import { createSwitchNavigator } from 'react-navigation'
 import AuthLoading from './screens/AuthLoading.vue'
 
-const TopLevelNavigator = SwitchNavigator(
+const TopLevelNavigator = createSwitchNavigator(
   {
     Auth: AuthLoading,
   },
