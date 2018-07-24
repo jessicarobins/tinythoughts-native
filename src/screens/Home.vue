@@ -1,7 +1,7 @@
 <template>
   <nb-content padder class="content">
     <new-line-form v-if="showForm" />
-    <entry-list />
+    <entry-list :tag="tag" />
   </nb-content>
 </template>
 
@@ -23,12 +23,10 @@ export default {
       'linesAreLoading',
     ]),
     showForm() {
-      return !this.linesAreLoading && !this.hasToday
+      return !this.linesAreLoading && !this.hasToday && !this.tag
     },
     tag() {
-      const tag = this.navigation.getParam('tag')
-      console.log('tag? ', tag)
-      return tag
+      return this.navigation.getParam('tag')
     }
   },
 };

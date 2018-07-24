@@ -20,11 +20,10 @@ const styles = StyleSheet.create({
 })
 
 const TagButton = ({ navigation, tag }) => {
+  const param = tag.replace('#', '')
+
   function navigate() {
-    const param = tag.replace('#', '')
-    console.log('attempting to navigate to ', param)
     navigation.navigate('Home', { tag: param })
-    console.log('navigation after', navigation)
   }
 
   return (
