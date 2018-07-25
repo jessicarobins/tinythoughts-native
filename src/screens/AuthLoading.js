@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { ActivityIndicator, View } from 'react-native'
+import { ActivityIndicator, Image, View } from 'react-native'
 import store from '../store'
 import { authPromise } from '../firebase'
+import logo from '../assets/images/notebook.png'
 
 class AuthLoading extends Component {
   constructor(props) {
@@ -18,8 +19,8 @@ class AuthLoading extends Component {
   // Render any loading content that you like here
   render() {
     return (
-      <View>
-        <ActivityIndicator />
+      <View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1 }}>
+        <Image source={logo} resizeMode="contain" style={{ width: '100%', height: 200 }} />
       </View>
     );
   }

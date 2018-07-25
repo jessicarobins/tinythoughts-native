@@ -8,6 +8,7 @@ import AuthLoading from './screens/AuthLoading'
 import Home from './screens/Home.vue'
 import Login from './screens/Login.vue'
 import LoginSignup from './screens/LoginSignup.vue'
+import Signup from './screens/Signup.vue'
 import NavMenu from './components/NavMenu.vue'
 import SidebarDrawer from './components/SidebarDrawer.vue'
 import router from './router'
@@ -38,6 +39,12 @@ const AuthStack = createStackNavigator({
     screen: Login,
     navigationOptions: {
       title: 'Login'
+    }
+  },
+  Signup: {
+    screen: Signup,
+    navigationOptions: {
+      title: 'Sign up'
     }
   },
   LoginSignup,

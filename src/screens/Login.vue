@@ -70,10 +70,4 @@ export default {
 .login {
   margin-top: 20px;
 }
-
-.logo {
-  font-family: SpecialElite;
-  text-align: center;
-  padding-top: 20px;
-}
 </style>
