@@ -7,7 +7,7 @@
       :maxLength="280"
       v-bind:onBlur="onBlur"
       v-bind:onFocus="onFocus"
-      placeholder="What do you want to say today?"
+      :placeholder="prompt"
       :placeholderTextColor="placeholderColor"
       :rowSpan="10"
       v-model="text"></nb-textarea>
@@ -41,7 +41,7 @@ import { utils } from 'tt-module'
 
 export default {
   name: 'LineForm',
-  props: ['handleSubmit'],
+  props: ['handleSubmit', 'prompt'],
   data() {
     return {
       focused: false,

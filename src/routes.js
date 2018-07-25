@@ -15,14 +15,19 @@ import router from './router'
 
 const Drawer = createDrawerNavigator(
   {
-    Home
+    Home: {
+      screen: Home,
+      navigationOptions: {
+        headerTitle: 'jess'
+      }
+    }
   },
   {
     initialRouteName: 'Home',
     contentOptions: {
       activeTintColor: "#e91e63"
     },
-    contentComponent: props => <SidebarDrawer {...props} />
+    contentComponent: props => <SidebarDrawer {...props} />,
   }
 )
 
@@ -30,7 +35,7 @@ const AppStack = createStackNavigator({
   Drawer: Drawer,
 }, {
   navigationOptions: {
-    header: (props) => <NavMenu {...props} />
+    header: props => <NavMenu {...props} />
   }
 })
 

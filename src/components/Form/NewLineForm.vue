@@ -1,13 +1,13 @@
 <template>
   <view class="form-container">
     <nb-h1 class="date">{{ todaysDate }}</nb-h1>
-    <line-form :handle-submit="addLine" />
+    <line-form :handle-submit="addLine" :prompt="prompt" v-if="!promptsAreLoading" />
   </view>
 </template>
 
 <script>
 import moment from 'moment'
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import LineForm from './LineForm.vue'
 
 export default {
@@ -15,14 +15,22 @@ export default {
   components: {
     LineForm
   },
+  mounted() {
+    this.getPrompts()
+  },
   computed: {
+    ...mapGetters([
+      'prompt',
+      'promptsAreLoading'
+    ]),
     todaysDate() {
       return moment().format('MMMM D, YYYY');
     },
   },
   methods: {
     ...mapActions([
-      'addLine'
+      'addLine',
+      'getPrompts'
     ]),
   }
 };

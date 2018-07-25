@@ -13,11 +13,13 @@ const debug = process.env.NODE_ENV !== 'production';
 
 const auth = modules.auth({ firebase, router, displayError })
 const lines = modules.lines({ firebase })
+const prompts = modules.prompts({ firebase })
 
 export default new Vuex.Store({
   modules: {
     auth,
     lines,
+    prompts,
     site: modules.site
   },
 })
