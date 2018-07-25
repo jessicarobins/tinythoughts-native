@@ -12,15 +12,17 @@
       :rowSpan="10"
       v-model="text"></nb-textarea>
     <nb-text class="length">{{ length }}/280</nb-text>
-    <view>
-      <view v-if="tags.length" class="tags">
-        <nb-text class="has-text-primary tag"
-          v-for="tag in tags"
-          :key="tag">#{{ tag }}</nb-text>
-      </view>
-      <nb-text v-else class="hint">
-        Hint: type <nb-badge><nb-text>#tag</nb-text></nb-badge> to add <nb-text class="has-text-primary">#tag</nb-text> to your post.
-      </nb-text>
+    <view v-if="tags.length" class="tags">
+      <nb-text class="has-text-primary tag"
+        v-for="tag in tags"
+        :key="tag">#{{ tag }}</nb-text>
+    </view>
+    <view v-else class="tags">
+      <nb-text>Hint: type </nb-text>
+      <nb-badge><nb-text>#tag</nb-text></nb-badge>
+      <nb-text> to add </nb-text>
+      <nb-text class="has-text-primary">#tag</nb-text>
+      <nb-text> to your post.</nb-text>
     </view>
     <nb-button
       class="button"
@@ -121,14 +123,11 @@ export default {
   color: #7957D5;
 }
 
-.hint {
-  line-height: 19px;
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: baseline;
 }
 
 .tag {
