@@ -1,6 +1,6 @@
 <template>
   <view>
-    <nb-spinner v-if="linesAreLoading" />
+    <full-page-spinner v-if="loading" />
     <date-list
       v-for="entry in lines"
       :is-purpleable="isPurpleable"
@@ -17,12 +17,14 @@ import { Image } from 'react-native'
 import { utils } from 'tt-module'
 
 import DateList from './DateList.vue'
+import FullPageSpinner from '../FullPageSpinner.vue'
 
 export default {
   name: 'EntryList',
-  props: ['tag'],
+  props: ['loading', 'tag'],
   components: {
     DateList,
+    FullPageSpinner,
     Image,
   },
   data() {
@@ -37,7 +39,6 @@ export default {
     ...mapGetters([
       'hasToday',
       'lines',
-      'linesAreLoading',
     ]),
     isPurpleable() {
       return this.hasToday && !this.tag

@@ -3,6 +3,14 @@
     <style-wrapper v-if="isAppReady">
       <app-navigation />
     </style-wrapper>
+    <view
+      v-else
+      :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1 }">
+      <image
+        :source="logo"
+        resizeMode="contain"
+        :style="{ width: '100%', height: 200 }" />
+    </view>
   </root>
 </template>
 
@@ -12,6 +20,7 @@ import Vuex from 'vuex'
 import { Root, VueNativeBase } from 'native-base'
 import { AppLoading, Font } from 'expo'
 
+import logo from './src/assets/images/notebook.png'
 import NavMenu from './src/components/NavMenu.vue'
 import StyleWrapper from './src/components/StyleWrapper'
 import AppNavigation from './src/routes'
@@ -32,7 +41,8 @@ export default {
   },
   data() {
     return {
-      isAppReady: false
+      isAppReady: false,
+      logo
     }
   },
   mounted() {
@@ -49,9 +59,9 @@ export default {
         })
       } catch (error) {
         console.log('some error occurred loading fonts', error)
-      } finally {
-        this.isAppReady = true
       }
+
+      this.isAppReady = true
     }
   }
 }

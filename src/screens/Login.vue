@@ -14,8 +14,14 @@
           text-content-type="password"
           v-model="password" />
       </nb-item>
-      <nb-button block primary v-bind:onPress="handleSignIn" class="login">
-        <nb-text>
+      <nb-button
+        block
+        primary
+        :disabled="userIsLoading"
+        v-bind:onPress="handleSignIn"
+        class="login">
+        <nb-spinner v-if="userIsLoading" />
+        <nb-text v-else>
           Login
         </nb-text>
       </nb-button>
@@ -24,18 +30,27 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import { Toast } from 'native-base'
+import FullPageSpinner from '../components/FullPageSpinner.vue'
 
 export default {
   name: 'Login',
   props: ['navigation'],
+  components: {
+    FullPageSpinner
+  },
   data() {
     return {
       dirty: false,
       email: '',
       password: '',
     }
+  },
+  computed: {
+    ...mapGetters([
+      'userIsLoading',
+    ])
   },
   methods: {
     ...mapActions([
@@ -44,17 +59,17 @@ export default {
     formIsValid() {
       return this.email.length && this.password.length
     },
-    async handleSignIn() {
+    handleSignIn() {
       if (this.formIsValid()) {
-        return this.userEmailSignIn({
+        this.userEmailSignIn({
           user: {
             email: this.email,
             password: this.password
           }
         })
+      } else {
+        this.dirty = true
       }
-
-      this.dirty = true
     },
   },
 };

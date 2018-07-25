@@ -146,8 +146,8 @@ export default {
   tabActiveBgColor: platform === "ios" ? "#cde1f9" : "#3F51B5",
 
   // Header
-  toolbarBtnColor: "#fff",
-  get toolbarDefaultBg() {
+  toolbarDefaultBg: '#fff',
+  get toolbarBtnColor() {
     return this.brandPrimary
   },
   toolbarHeight: platform === "ios" ? 64 : 56,
@@ -156,8 +156,8 @@ export default {
   searchBarHeight: platform === "ios" ? 30 : 40,
   searchBarInputHeight: platform === "ios" ? 30 : 50,
   toolbarBtnTextColor: "#fff",
-  iosStatusbar: "light-content",
-  toolbarDefaultBorder: platform === "ios" ? "#a7a6ab" : "#3F51B5",
+  iosStatusbar: "dark-content",
+  toolbarDefaultBorder: '#fff',
   get statusBarColor() {
     return color(this.toolbarDefaultBg)
       .darken(0.2)

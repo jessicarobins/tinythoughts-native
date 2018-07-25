@@ -35,8 +35,14 @@
           </nb-text>
         </nb-button><nb-text>.</nb-text>
       </nb-item>
-      <nb-button block primary v-bind:onPress="handleSignUp" class="login">
-        <nb-text>
+      <nb-button
+        block
+        primary
+        :onPress="debouncedhandleSignUp"
+        :disabled="userIsLoading"
+        class="login">
+        <nb-spinner v-if="userIsLoading" />
+        <nb-text v-else>
           Sign up
         </nb-text>
       </nb-button>
@@ -45,9 +51,11 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import { Toast } from 'native-base'
 import { Constants, WebBrowser } from 'expo'
+import debounce from 'lodash/debounce'
+import { displayError } from '../util'
 
 export default {
   name: 'Login',
@@ -60,15 +68,32 @@ export default {
       passwordConfirm: '',
     }
   },
+  computed: {
+    ...mapGetters([
+      'userIsLoading',
+    ])
+  },
   methods: {
     ...mapActions([
       'userEmailSignUp',
     ]),
+    // vue sucks
+    // eslint-disable-next-line func-names
+    debouncedhandleSignUp: debounce(function () {
+      this.handleSignUp()
+    }, 1000, { leading: true }),
     formIsValid() {
       return this.email.length && this.password.length && this.passwordConfirm.length
+        && this.password === this.passwordConfirm
     },
     handleSignUp() {
-      if (this.formIsValid()) {
+      if (!this.email.length) {
+        displayError({ message: 'Email is required' })
+      } else if (!this.password.length) {
+        displayError({ message: 'Password is required' })
+      } else if (this.password !== this.passwordConfirm) {
+        displayError({ message: 'Passwords must match' })
+      } else {
         return this.userEmailSignUp({
           user: {
             email: this.email,

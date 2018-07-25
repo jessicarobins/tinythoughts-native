@@ -26,7 +26,7 @@
       class="button"
       primary
       rounded
-      v-bind:onPress="debouncedOnSubmit">
+      :onPress="debouncedOnSubmit">
       <nb-text>
         Save
       </nb-text>
@@ -53,7 +53,7 @@ export default {
     // eslint-disable-next-line func-names
     debouncedOnSubmit: debounce(function () {
       this.onSubmit()
-    }, 1000),
+    }, 1000, { leading: true }),
     onSubmit() {
       if (this.text.length) {
         return this.handleSubmit({

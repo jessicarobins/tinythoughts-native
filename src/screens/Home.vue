@@ -7,7 +7,7 @@
       </nb-button>
     </view>
     <new-line-form v-if="showForm" />
-    <entry-list :tag="tag" :key="tag" />
+    <entry-list :tag="tag" :key="tag" :loading="linesAreLoading" />
   </nb-content>
 </template>
 

@@ -63,11 +63,11 @@ export default {
       'userSignOut'
     ]),
     handleSignOut() {
-      console.log('signing out...')
       this.userSignOut()
     },
     handleListItemClick(dataObj) {
-      this.navigation.navigate(dataObj.route);
+      this.navigation.navigate(dataObj.route, { tag: null })
+      this.navigation.closeDrawer()
     }
   }
 };
@@ -87,6 +87,7 @@ export default {
   padding: 10px;
   border-color: #dbdbdb;
   border-bottom-width: 1px;
+  border-top-width: 1px;
   border-style: solid;
 }
 

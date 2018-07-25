@@ -6,7 +6,9 @@
       </nb-button>
     </nb-left>
     <nb-body>
-      <nb-title></nb-title>
+      <nb-title>
+        <nb-thumbnail :source="logo" small />
+      </nb-title>
     </nb-body>
     <nb-right />
   </nb-header>
@@ -14,10 +16,16 @@
 
 <script>
 import { DrawerActions } from 'react-navigation'
+import logo from '../assets/images/notebook.png'
 
 export default {
   name: 'NavMenu',
   props: ['navigation'],
+  data() {
+    return {
+      logo
+    }
+  },
   methods: {
     handleMenuPress() {
       this.navigation.dispatch(DrawerActions.toggleDrawer())
