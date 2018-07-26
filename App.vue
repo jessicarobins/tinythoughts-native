@@ -18,7 +18,7 @@
 import Vue from 'vue-native-core'
 import Vuex from 'vuex'
 import { Root, VueNativeBase } from 'native-base'
-import { AppLoading, Font } from 'expo'
+// import { AppLoading, Font } from 'expo'
 
 import logo from './src/assets/images/notebook.png'
 import NavMenu from './src/components/NavMenu.vue'
@@ -33,7 +33,6 @@ Vue.prototype.$store = store
 export default {
   name: 'App',
   components: {
-    AppLoading,
     AppNavigation,
     NavMenu,
     Root,
@@ -50,16 +49,16 @@ export default {
   },
   methods: {
     async loadFonts() {
-      try {
-        this.isAppReady = false
-        await Font.loadAsync({
-          Roboto: require('native-base/Fonts/Roboto.ttf'),
-          Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-          SpecialElite: require('./src/assets/fonts/SpecialElite-Regular.ttf'),
-        })
-      } catch (error) {
-        console.log('some error occurred loading fonts', error)
-      }
+      // try {
+      //   this.isAppReady = false
+      //   await Font.loadAsync({
+      //     Roboto: require('native-base/Fonts/Roboto.ttf'),
+      //     Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+      //     SpecialElite: require('./src/assets/fonts/SpecialElite-Regular.ttf'),
+      //   })
+      // } catch (error) {
+      //   console.log('some error occurred loading fonts', error)
+      // }
 
       this.isAppReady = true
     }

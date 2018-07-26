@@ -53,7 +53,6 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import { Toast } from 'native-base'
-import { Constants, WebBrowser } from 'expo'
 import debounce from 'lodash/debounce'
 import { displayError } from '../util'
 
@@ -105,10 +104,10 @@ export default {
       this.dirty = true
     },
     openTOC() {
-      WebBrowser.openBrowserAsync('https://tinythoughts.me/terms-and-conditions')
+      // WebBrowser.openBrowserAsync('https://tinythoughts.me/terms-and-conditions')
     },
     openPrivacyPolicy() {
-      WebBrowser.openBrowserAsync('https://tinythoughts.me/privacy-policy')
+      // WebBrowser.openBrowserAsync('https://tinythoughts.me/privacy-policy')
     }
   },
 };
