@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'tinythoughts' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for tinythoughts
+
+  target 'tinythoughts-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  end
+
+  target 'tinythoughtsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'tinythoughts-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for tinythoughts-tvOS
+
+  target 'tinythoughts-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/Libraries/Text/Text/RCTTextView.m \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/Libraries/Text/Text/RCTTextView.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/Libraries/Text/Text/RCTTextShadowView.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextShadowView.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/Libraries/Text/RCTTextAttributes.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h

@@ -51,7 +51,6 @@ export default {
 }
 
 .tag {
-  font-family: SpecialElite;
   margin-top: 10px;
   margin-bottom: 10px;
 }

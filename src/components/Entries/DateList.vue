@@ -53,7 +53,4 @@ export default {
   border-color: #7957d5;
 }
 
-.date {
-  font-family: SpecialElite;
-}
 </style>

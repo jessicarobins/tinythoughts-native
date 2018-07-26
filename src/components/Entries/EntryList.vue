@@ -71,10 +71,6 @@ export default {
   color: #5534ae;
 }
 
-.date {
-  font-family: SpecialElite;
-}
-
 .year {
   margin-bottom: 5px;
 }

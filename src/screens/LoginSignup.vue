@@ -57,7 +57,6 @@ export default {
 }
 
 .logo {
-  font-family: SpecialElite;
   text-align: center;
   padding-top: 20px;
 }

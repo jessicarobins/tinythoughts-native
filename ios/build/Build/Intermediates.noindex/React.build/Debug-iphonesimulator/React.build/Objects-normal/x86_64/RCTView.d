@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTView.m \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTView.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTBorderDrawing.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/jessicarobins/workspace/tinythoughts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/jessicarobins/workspace/tinythoughts/node_modules/react-native/React/Modules/RCTI18nUtil.h

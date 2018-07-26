@@ -46,7 +46,6 @@ export default {
 }
 
 .date {
-  font-family: SpecialElite;
   margin-bottom: 20px;
   text-align: right;
 }
