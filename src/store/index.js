@@ -12,7 +12,7 @@ Vue.use(Vuex)
 
 const debug = process.env.NODE_ENV !== 'production'
 
-const auth = modules.auth({ firebase, router, displayError, ...authActions })
+const auth = modules.auth({ firebase, router, displayError })
 const lines = modules.lines({ firebase })
 const prompts = modules.prompts({ firebase })
 
