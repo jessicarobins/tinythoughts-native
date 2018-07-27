@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -69,6 +68,7 @@
 		DDDBCBBB38834DE298333A4F /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEB0443D34146C8B8F655F6 /* FontAwesome.ttf */; };
 		ED956CCE89A54AA6B5F92DDD /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B86979AF7FC0404C8AE2F567 /* Zocial.ttf */; };
 		F6930F9E67657198C1A60C55 /* libPods-tinythoughtsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 771326C50A03297CCFCA578A /* libPods-tinythoughtsTests.a */; };
+		DAA2571C9E464B2EB9C113C0 /* SpecialElite-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A216E8773C6B4EA4AF7CEB37 /* SpecialElite-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -421,6 +421,7 @@
 		FAD33C2B491F4E08AA497354 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		FD12138E21A7D7F179DA72AD /* Pods-tinythoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinythoughts.release.xcconfig"; path = "Pods/Target Support Files/Pods-tinythoughts/Pods-tinythoughts.release.xcconfig"; sourceTree = "<group>"; };
 		FD63B5C7F356B8702AAF0C8D /* libPods-tinythoughts-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tinythoughts-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A216E8773C6B4EA4AF7CEB37 /* SpecialElite-Regular.ttf */ = {isa = PBXFileReference; name = "SpecialElite-Regular.ttf"; path = "../src/assets/fonts/SpecialElite-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -655,6 +656,7 @@
 				B36054A49F764D378FC3025D /* Octicons.ttf */,
 				B76DDD17FB5C436C81900706 /* SimpleLineIcons.ttf */,
 				F157AE1A7EB343849F99A859 /* Zocial.ttf */,
+				A216E8773C6B4EA4AF7CEB37 /* SpecialElite-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -770,6 +772,7 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				6D71A7C0210B58BD00EFD1E6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1248,6 +1251,7 @@
 				A6589E7006C344FF8170B46F /* Octicons.ttf in Resources */,
 				58CC8301018645A4B3E8093D /* SimpleLineIcons.ttf in Resources */,
 				60FE42C319BC44489F31980E /* Zocial.ttf in Resources */,
+				DAA2571C9E464B2EB9C113C0 /* SpecialElite-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1350,6 +1354,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6D71A7C0210B58BD00EFD1E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
 		};
 		809C17875C3FB399EED2EEE1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

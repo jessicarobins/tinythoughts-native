@@ -18,4 +18,12 @@ export function authPromise() {
   })
 }
 
+export const functions = {
+  addSubscription: firebase.functions().httpsCallable('addSubscription'),
+  cancelSubscription: firebase.functions().httpsCallable('cancelSubscription'),
+  getSubscription: firebase.functions().httpsCallable('getSubscription'),
+  resubscribe: firebase.functions().httpsCallable('resubscribe'),
+  setEncryptionKey: firebase.functions().httpsCallable('setEncryptionKey'),
+}
+
 export default firebase
